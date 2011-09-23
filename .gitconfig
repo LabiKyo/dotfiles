@@ -1,0 +1,27 @@
+[alias]
+	ci = commit
+	co = checkout
+	br = branch
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg = log --graph --color
+	ft = fetch
+	rb = rebase
+	cf = config
+	df = diff
+[user]
+	name = Labi Kyo
+	email = labikyo@gmail.com
+[core]
+	editor = vim
+	excludesfile = /Users/lixinyue/.gitignore
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[merge]
+	tool = opendiff
+[branch]
+	autosetuprebase = always
