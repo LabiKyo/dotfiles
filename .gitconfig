@@ -15,7 +15,7 @@
 	email = labikyo@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/lixinyue/.gitignore
+	excludesfile = ~/.gitignore
 [color]
 	branch = auto
 	diff = auto
