@@ -13,8 +13,6 @@ alias g="git"
 alias p="python"
 
 # Named directories
-nginx=/usr/local/nginx
-logs=/home/wwwlogs
 
 # set Emacs mode
 bindkey -e
@@ -82,7 +80,7 @@ setopt AUTO_CD
 
 autoload -U promptinit
 promptinit
-prompt adam2 yellow
+prompt adam2 8bit green
 
 function precmd() {
     if [ -d .git ]; then

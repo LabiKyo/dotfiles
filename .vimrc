@@ -99,6 +99,9 @@ set encoding=utf-8
 set so=4
 set number
 set whichwrap=b,s,<,>,[,],h,l
+
+set undofile
+set undodir=~/.vim/undo
 " set iskeyword+=-
 
 set nobackup

@@ -96,7 +96,7 @@ setopt AUTO_CD
 
 autoload -U promptinit
 promptinit
-prompt adam2 green
+prompt adam2 8bit green
 
 function precmd() {
     if [ -d .git ]; then
