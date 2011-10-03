@@ -4,7 +4,7 @@
 alias linode='ssh -D 7070 labikyo@linodehost'
 alias psgrep="ps aux | grep"
 alias ls='ls -hG'
-alias ll='ls -ahl'
+alias ll='ls -ahlG'
 alias grep="grep --color -n"
 alias du="du -h"
 

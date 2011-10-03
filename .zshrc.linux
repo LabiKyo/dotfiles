@@ -1,9 +1,9 @@
 #! /bin/zsh
 
 # alias
-alias psgrep="ps aux | grep --color"
+alias psgrep="ps aux | grep"
 alias ls='ls -h --color'
-alias ll='ls -ahl'
+alias ll='ls -ahl --color'
 alias c='clear'
 alias grep="grep --color"
 alias du="du -h"
