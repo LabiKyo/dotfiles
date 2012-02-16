@@ -1,18 +1,20 @@
 #! /bin/zsh
 
 # alias
-alias psgrep="ps aux | grep"
+alias psgrep="ps aux | grep --color"
 alias ls='ls -h --color'
-alias ll='ls -ahl --color'
+alias ll='ls -ahl'
 alias c='clear'
 alias grep="grep --color"
 alias du="du -h"
+alias sd="sudo"
 
 alias v="vim"
 alias g="git"
 alias p="python"
 
 # Named directories
+#nginx=/usr/local/nginx
 
 # set Emacs mode
 bindkey -e
@@ -113,3 +115,5 @@ function title() {
 function preexec() {
     title "$1" "$USER@%m" "%35<...<%~"
 }
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
