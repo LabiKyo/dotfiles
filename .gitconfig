@@ -10,6 +10,7 @@
 	rb = rebase
 	cf = config
 	df = diff
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [user]
 	name = Labi Kyo
 	email = labikyo@gmail.com
