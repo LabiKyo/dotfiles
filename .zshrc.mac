@@ -1,19 +1,23 @@
 #! /bin/zsh
 
 # alias
-alias linode='ssh -D 7070 labikyo@linodehost'
+alias linode='ssh -D 8080 labikyo@linodehost'
 alias psgrep="ps aux | grep"
 alias ls='ls -hG'
 alias ll='ls -ahlG'
 alias grep="grep --color -n"
+alias fgrep="fgrep --color -n"
 alias du="du -h"
+alias sd="sudo"
 
 alias v="vim"
 alias p="python"
 alias g="git"
+alias r="ruby1.9"
+alias rb="irb1.9"
 
 # MacPorts path
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin
 
 # Oracle environment variables
 export ORACLE_HOME=~/oracle/instantclient_10_2
@@ -22,12 +26,25 @@ export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export SQLPATH=$ORACLE_HOME
 export TNS_ADMIN=$ORACLE_HOME/network/admin
 export ARCHFLAGS='-arch x86_64'
+export NODE_ENV='dev'
+export NODE_PATH='/usr/local/lib'
 
 # Named directories
 codes=~/Dropbox/Codes
+python=~codes/Python
+node=~codes/node
+js=~codes/JavaScript
 ppt=~codes/Django/ppt
+express=~codes/express
+node_modules=$NODE_PATH/node_modules/
+
 notes=~/Documents/Dropbox/Notes
+books=~/Documents/Dropbox/Books
+downloads=~/Downloads
+
 django=/Library/Python/2.6/site-packages/django
+tornado=~codes/tornado/tornado/tornado
+
 nginx=/usr/local/webserver/nginx/
 
 # set Emacs mode
@@ -129,3 +146,5 @@ function title() {
 function preexec() {
     title "$1" "$USER@%m" "%35<...<%~"
 }
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session

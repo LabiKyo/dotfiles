@@ -88,6 +88,14 @@ if &diff
 	set wrap=on
 endif
 
+" Octave syntax
+augroup filetypedetect
+  au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+augroup END
+
+" pathogen.vim
+call pathogen#infect()
+
 
 " user defined
 colorscheme desert
@@ -112,7 +120,8 @@ helptags ~/.vim/doc
 " set filetype
 let filetype_m='objc'
 let filetype_tpl='smarty'
-au BufRead,BufNewFile *.less set filetype=css
+let filetype_less='less'
+"au BufRead,BufNewFile *.less set filetype=css
 
 " list setting
 set list
