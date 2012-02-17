@@ -2,6 +2,7 @@
 
 # alias
 alias linode='ssh -D 8080 labikyo@linodehost'
+alias wdc='ssh labikyo@wodache.com'
 alias psgrep="ps aux | grep"
 alias ls='ls -hG'
 alias ll='ls -ahlG'
