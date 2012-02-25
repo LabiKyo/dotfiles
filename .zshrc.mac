@@ -14,8 +14,9 @@ alias sd="sudo"
 alias v="vim"
 alias p="python"
 alias g="git"
-alias r="ruby1.9"
-alias rb="irb1.9"
+alias r="ruby"
+alias rb="irb"
+alias rdb="r -r debug"
 
 # MacPorts path
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin
