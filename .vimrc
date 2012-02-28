@@ -97,20 +97,51 @@ augroup END
 call pathogen#infect()
 
 
-" user defined
+" user defined from here
+" key binding
+
+nnoremap j gj
+nnoremap k gk
+noremap H ^
+noremap L $
+
+" Scroll the viewpoint faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" use enter to create a new line
+nnoremap <CR> o
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" smart escape
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" powerful command line
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+" write with sudo
+cnoremap w!! w !sudo tee % >/dev/null
+
 colorscheme desert
-hi Folded cterm=bold ctermfg=1
-hi FoldColumn cterm=bold ctermfg=2
+" Highlight trailing whitespace
+:highlight TrailWhitespace ctermbg=red guibg=red
+:match TrailWhitespace /\s\+$\| \+\ze\t/
+"hi Folded cterm=bold ctermfg=1
+"hi FoldColumn cterm=bold ctermfg=2
 
 set encoding=utf-8
 
-set so=4
+"set so=4
 set number
 set whichwrap=b,s,<,>,[,],h,l
 
 set undofile
 set undodir=~/.vim/undo
-" set iskeyword+=-
 
 set nobackup
 set writebackup
@@ -121,11 +152,11 @@ helptags ~/.vim/doc
 let filetype_m='objc'
 let filetype_tpl='smarty'
 let filetype_less='less'
-"au BufRead,BufNewFile *.less set filetype=css
 
 " list setting
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:▸-,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
 
 " indent setting
 set ai
@@ -137,21 +168,19 @@ set shiftwidth=4
 set noexpandtab
 set formatoptions+=mM
 
-" miniBufExplorer
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplMapWindowNavVim = 1
-
 " clipboard
 set clipboard=unnamed
 
-" zencoding
-let g:user_zen_settings = {
-\    'html' : {
-\        'indentation' : '  '
-\    },
-\}
-" ctags
-let tlist_js_settings = 'javascript;s:string;a:array;o:object;f:function'
+" relative number
+if exists("&relativenumber")
+	set relativenumber
+	silent! autocmd InsertEnter * :set number
+	silent! autocmd InsertLeave * :set relativenumber
+	silent! au FocusLost * :set number
+endif
+
 " cursor
-set cul
-set cuc
+autocmd WinLeave * set nocursorline
+autocmd WinLeave * set nocursorcolumn
+autocmd WinEnter * set cursorline
+autocmd WinEnter * set cursorcolumn
