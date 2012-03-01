@@ -180,6 +180,8 @@ if exists("&relativenumber")
 endif
 
 " cursor
+set cursorline
+set cursorcolumn
 autocmd WinLeave * set nocursorline
 autocmd WinLeave * set nocursorcolumn
 autocmd WinEnter * set cursorline
