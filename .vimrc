@@ -89,9 +89,9 @@ if &diff
 endif
 
 " Octave syntax
-augroup filetypedetect
-  au! BufRead,BufNewFile *.m,*.oct set filetype=octave
-augroup END
+"augroup filetypedetect
+"  au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+"augroup END
 
 " pathogen.vim
 call pathogen#infect()
