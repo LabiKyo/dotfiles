@@ -3,7 +3,7 @@
 # alias
 alias linode='ssh -D 7070 labikyo@linodehost'
 alias wdc='ssh labikyo@wodache.com'
-alias psgrep="ps aux | grep"
+alias psgrep="ps aux | grep -v grep | grep"
 alias ls='ls -hG'
 alias ll='ls -ahlG'
 alias grep="grep --color -n"
