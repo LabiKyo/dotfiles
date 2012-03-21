@@ -18,7 +18,7 @@ alias r="ruby"
 alias rb="irb"
 alias rdb="r -r debug"
 
-export PATH=/usr/loca/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export ARCHFLAGS='-arch x86_64'
 export NODE_ENV='dev'
 
@@ -27,7 +27,7 @@ codes=~/Dropbox/Codes
 python=~codes/Python
 node=~codes/node
 js=~codes/JavaScript
-ppt=~codes/Django/ppt
+wdc=~codes/Ruby/Rails/wdc
 express=~codes/express
 
 dropbox=~/Dropbox
@@ -80,7 +80,7 @@ zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns \
 '*?.(o|c~|old|pro|zwc)' '*~'
 
 # how many line/command we record
-export HISTSIZE=5000
+export HISTSIZE=10000
 
 # where we record them
 export HISTFILE="$HOME/.zshhistory"
