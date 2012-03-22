@@ -1,6 +1,6 @@
 #! /bin/zsh
 # load configs
-DIR="./.zsh"
+DIR="$HOME/.zsh"
 for FILE in `ls $DIR`; do
     source "$DIR/$FILE"
 done
