@@ -1,38 +1,9 @@
 #! /bin/zsh
-
-# alias
-alias linode='ssh -D 7070 labikyo@linodehost'
-alias wdc='ssh labikyo@wodache.com'
-alias psgrep="ps aux | grep -v grep | grep"
-alias ls='ls -hG'
-alias ll='ls -ahlG'
-alias grep="grep --color -n"
-alias fgrep="fgrep --color -n"
-alias du="du -h"
-alias sd="sudo"
-
-alias v="vim"
-alias p="python"
-alias g="git"
-alias r="ruby"
-alias rb="irb"
-alias rdb="r -r debug"
-
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
-export ARCHFLAGS='-arch x86_64'
-export NODE_ENV='dev'
-
-# Named directories
-codes=~/Dropbox/Codes
-python=~codes/Python
-node=~codes/node
-js=~codes/JavaScript
-wdc=~codes/Ruby/Rails/wdc
-express=~codes/express
-
-dropbox=~/Dropbox
-notes=~dropbox/Notes
-books=~dropbox/Books
+# load configs
+DIR="./.zsh"
+for FILE in `ls $DIR`; do
+    source "$DIR/$FILE"
+done
 
 # set Emacs mode
 bindkey -e
@@ -40,98 +11,6 @@ bindkey -e
 # Bind shift+tab to go backward completion
 bindkey  '^[[Z' reverse-menu-complete
 
-autoload -U compinit
-compinit
-zstyle ':completion::complete:*' use-cache 1
-
-zmodload -i zsh/complist
-
-autoload -U zmv
-
-
-# completion rules
-zstyle ':completion:*' completer _complete _list _oldlist _expand _ignored _match _correct _approximate _prefix
-zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 1 numeric
-zstyle ':completion:*' auto-description 'Specify: %d'
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' verbose true
-zstyle ':completion:*:functions' ignored-patterns '_*'
-zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.(o|c~|zwc)' '*?~'
-
-zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX+$#SUFFIX)/3 )) numeric )'
-
-# formatting and messages
-zstyle ':completion:*' verbose yes
-zstyle ':completion:*:descriptions' format $'%{\e[0;31m%}%d%{\e[0m%}'
-zstyle ':completion:*:messages' format $'%{\e[0;31m%}%d%{\e[0m%}'
-zstyle ':completion:*:warnings' format $'%{\e[0;31m%}No matches for: %d%{\e[0m%}'
-zstyle ':completion:*:corrections' format $'%{\e[0;31m%}%d (errors: %e)%{\e[0m%}'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' file-sort name
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
-zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path ~/.zcompcache/$HOST
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~'
-zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns \
-'*?.(o|c~|old|pro|zwc)' '*~'
-
-# how many line/command we record
-export HISTSIZE=10000
-
-# where we record them
-export HISTFILE="$HOME/.zshhistory"
-
-# comit the conf
-export SAVEHIST=$HISTSIZE
-
-# tell it to ignore the duplicate entries
-setopt hist_ignore_all_dups
-
-# set up the extended globing - that's so nice :)
-setopt extendedglob
-#cowsay -f /usr/share/cowsay-3.03/cows/bunny.cow `fortune -s`
 
 # set AUTO_CD
 setopt AUTO_CD
-
-autoload -U promptinit
-promptinit
-prompt adam2 8bit green
-
-function precmd() {
-    if [ -d .git ]; then
-        RPROMPT='%F{red}(repo: git, branch: `git symbolic-ref HEAD 2> /dev/null | cut -b 12-`)'
-    elif [ -d .hg ]; then
-        RPROMPT='%F{red}(repo: hg)'
-    else
-        RPROMPT=''
-    fi;
-}
-
-function title() {
-# escape '%' chars in $1, make nonprintables visible
-    a=${(V)1//\%/\%\%}
-
-   # Truncate command, and join lines.
-    a=$(print -Pn "%40>...>$a" | tr -d "\n")
-
-    case $TERM in
-        screen)
-            print -Pn "\ek$a:$3\e\\" # screen title (in ^A")
-        ;;
-        xterm*|rxvt|ansi)
-            print -Pn "\e]1;$2 | $a:$3\a" # plain xterm title
-            print -Pn "\e]2;$2 | $a:$3\a" # tab title
-        ;;
-    esac
-}
-
-function preexec() {
-    title "$1" "$USER@%m" "%35<...<%~"
-}
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session
