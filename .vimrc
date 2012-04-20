@@ -179,9 +179,6 @@ if exists("&relativenumber")
   silent! au FocusLost * :set number
 endif
 
-" spell
-setlocal spell spelllang=en_us
-
 " cursor
 " set cursorline
 " set cursorcolumn
