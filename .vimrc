@@ -173,11 +173,14 @@ set clipboard=unnamed
 
 " relative number
 if exists("&relativenumber")
-	set relativenumber
-	silent! autocmd InsertEnter * :set number
-	silent! autocmd InsertLeave * :set relativenumber
-	silent! au FocusLost * :set number
+  set relativenumber
+  silent! autocmd InsertEnter * :set number
+  silent! autocmd InsertLeave * :set relativenumber
+  silent! au FocusLost * :set number
 endif
+
+" spell
+setlocal spell spelllang=en_us
 
 " cursor
 " set cursorline
