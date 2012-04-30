@@ -1,0 +1,30 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+highlight Hint font: bold 20px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 0 0 0 1px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform: uppercase;
+set guioptions=bCrsBT
+set hintkeys=asdfg;lkjh
+set defsearch=duckduckgo-ssl
+
+" pass keys
+set passkeys+=*:<UP><DOWN><LEFT><RIGHT><Space><CR>
+set passkeys+=mail.google.com:jknpcxerRaAfFI?[]{}#/`~,*a,*n,*r,*u,*s,*t,gi,gs,gt,gd,ga,gl
+
+" remap
+noremap -count -description='previous <count> tab(s)' -modes=n,v h <count>gT
+noremap -count -description='next <count> tab(s)' -modes=n,v l <count><C-n>
+noremap -count -description='get back in the browser history. if <count> is specified, go back <count> pages' -modes=n,v J :<count>back<CR>
+noremap -count -description='get forward in the browser history. if <count> is specified, go forward <count> pages' -modes=n,v K :<count>forward<CR>
+noremap -description='switch to first tab' -modes=n,v H g^
+noremap -description='switch to last tab' -modes=n,v L g$
+noremap -description='switch to last viewed tab' -modes=n,v B b#<CR>
+noremap -description='switch to another tab group' -modes=n,v v :tgs 
+noremap -d='wiki search' !w :tabopen wikipedia-en 
+noremap -d='google' !g :tabopen google 
+noremap -d='duckduckgo' !d :tabopen duckduckgo-ssl 
+
+" command
+" autocommand
+"autocmd LocationChange mail.google.com :normal! <C-z>
+" vim: set ft=vim:
