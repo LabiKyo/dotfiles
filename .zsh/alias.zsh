@@ -4,8 +4,8 @@ alias wdc='ssh labikyo@wodache.com'
 alias psgrep="ps aux | grep -v grep | grep"
 alias ls='ls -hG'
 alias ll='ls -ahlG'
-alias grep="grep --color -n"
-alias fgrep="fgrep --color -n"
+alias grep="grep --color"
+alias fgrep="fgrep --color"
 alias du="du -h"
 alias sd="sudo"
 
