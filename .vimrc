@@ -174,9 +174,6 @@ set clipboard=unnamed
 " relative number
 if exists("&relativenumber")
   set relativenumber
-  silent! autocmd InsertEnter * :set number
-  silent! autocmd InsertLeave * :set relativenumber
-  silent! au FocusLost * :set number
 endif
 
 " cursor
@@ -186,3 +183,24 @@ endif
 " autocmd WinLeave * set nocursorcolumn
 " autocmd WinEnter * set cursorline
 " autocmd WinEnter * set cursorcolumn
+
+" reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" make Y behave like other capitals 
+map Y y$
+
+" emacs style key binding for insert mode
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <M-b> <C-o>b
+inoremap <M-f> <C-o>w
+inoremap <C-w> <Esc><Right>cb
+inoremap <C-u> <Esc><Right>c0
+inoremap <C-k> <Esc><Right>C
+inoremap <C-d> <Esc><Right>s
