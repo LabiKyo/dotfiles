@@ -3,8 +3,9 @@ promptinit
 prompt adam2 8bit green
 
 function precmd() {
-    if [ -d .git ]; then
-        RPROMPT='%F{red}(repo: git, branch: `git symbolic-ref HEAD 2> /dev/null | cut -b 12-`)'
+    git_branch=`git symbolic-ref HEAD 2> /dev/null | cut -b 12-`
+    if [ $git_branch ]; then
+        RPROMPT='%F{red}(repo: git, branch: $git_branch)'
     elif [ -d .hg ]; then
         RPROMPT='%F{red}(repo: hg)'
     else
