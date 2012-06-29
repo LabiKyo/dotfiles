@@ -172,9 +172,9 @@ set formatoptions+=mM
 set clipboard=unnamed
 
 " relative number
-if exists("&relativenumber")
-  set relativenumber
-endif
+set relativenumber
+" make relative number set for all buffer
+au BufReadPost * set relativenumber
 
 " cursor
 " set cursorline
@@ -203,4 +203,3 @@ inoremap <M-f> <C-o>w
 inoremap <C-w> <Esc><Right>cb
 inoremap <C-u> <Esc><Right>c0
 inoremap <C-k> <Esc><Right>C
-inoremap <C-d> <Esc><Right>s
