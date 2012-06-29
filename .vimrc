@@ -106,8 +106,8 @@ noremap H ^
 noremap L $
 
 " Scroll the viewpoint faster
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-e> 10<C-e>
+nnoremap <C-y> 10<C-y>
 
 " use enter to create a new line
 nnoremap <CR> o
@@ -120,10 +120,9 @@ nnoremap <C-l> <C-w>l
 " smart escape
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap jj <Esc>
+inoremap kk <Esc>
 
-" powerful command line
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
 " write with sudo
 cnoremap w!! w !sudo tee % >/dev/null
 
@@ -155,7 +154,7 @@ let filetype_less='less'
 
 " list setting
 set list
-set listchars=tab:▸-,eol:¬,trail:⋅,extends:❯,precedes:❮
+set listchars=tab:▸-,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
 " indent setting
@@ -188,7 +187,7 @@ au BufReadPost * set relativenumber
 vnoremap < <gv
 vnoremap > >gv
 
-" make Y behave like other capitals 
+" make Y behave like other capitals
 map Y y$
 
 " emacs style key binding for insert mode
@@ -203,3 +202,7 @@ inoremap <M-f> <C-o>w
 inoremap <C-w> <Esc><Right>cb
 inoremap <C-u> <Esc><Right>c0
 inoremap <C-k> <Esc><Right>C
+
+" powerful command line
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
