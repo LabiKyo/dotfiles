@@ -5,6 +5,9 @@ for FILE in `ls $DIR`; do
     source "$DIR/$FILE"
 done
 
+# set locale
+export LANG=en_US.UTF-8
+
 # set Emacs mode
 bindkey -e
 

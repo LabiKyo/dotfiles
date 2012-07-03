@@ -2,8 +2,13 @@
 alias linode='ssh -D 7070 labikyo@linodehost'
 
 alias psgrep="ps aux | grep -v grep | grep"
-alias ls='ls -hG'
-alias ll='ls -ahlG'
+if [[ "`uname`" == 'Linux' ]]; then
+	alias ls='ls -h --color'
+	alias ll='ls -ahl --color'
+else
+	alias ls='ls -hG'
+	alias ll='ls -ahlG'
+fi
 alias grep="grep --color"
 alias fgrep="fgrep --color"
 alias du="du -h"
