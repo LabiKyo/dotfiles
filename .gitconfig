@@ -3,7 +3,6 @@
 	co = checkout
 	br = branch
 	st = status
-	unstage = reset HEAD --
 	last = log -1 HEAD
 	lg = log --graph --color
 	ft = fetch
@@ -11,6 +10,16 @@
 	cf = config
 	df = diff
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	pl = pull
+	ps = push
+	ss = stash
+	us = reset HEAD --
+	ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
+	ai = add -i
+	ap = add -p
+	ds = diff --staged
+	amend = commit --amend -C HEAD
+	cp = cherry-pick
 [user]
 	name = Labi Kyo
 	email = labikyo@gmail.com
@@ -26,3 +35,5 @@
 	tool = opendiff
 [branch]
 	autosetuprebase = always
+[apply]
+	whitespace = nowarn
