@@ -13,3 +13,9 @@ bindkey  '^[[Z' reverse-menu-complete
 
 # set AUTO_CD
 setopt AUTO_CD
+
+if [[ "`uname`" == 'Linux' ]]; then
+    if [[ -z $TMUX ]]; then
+        tmux attach
+    fi
+fi
