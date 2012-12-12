@@ -169,6 +169,7 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 set formatoptions+=mM
+set expandtab
 
 " clipboard
 set clipboard=unnamed
