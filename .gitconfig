@@ -1,39 +1,38 @@
 [alias]
-	ci = commit
-	co = checkout
-	br = branch
-	st = status
-	last = log -1 HEAD
-	lg = log --graph --color
-	ft = fetch
-	rb = rebase
-	cf = config
-	df = diff
-	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	pl = pull
-	ps = push
-	ss = stash
-	us = reset HEAD --
-	ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
-	ai = add -i
-	ap = add -p
-	ds = diff --staged
-	amend = commit --amend -C HEAD
-	cp = cherry-pick
+  ci = commit
+  co = checkout
+  br = branch
+  st = status
+  last = log -1 HEAD
+  lg = log --graph --color
+  ft = fetch
+  rb = rebase
+  cf = config
+  df = diff
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  pl = pull
+  ps = push
+  ss = stash
+  us = reset HEAD -- # unstage
+  ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
+  ai = add -i
+  ap = add -p
+  ds = diff --staged
+  amend = commit --amend -C HEAD
+  cp = cherry-pick
+  cl = clone
 [user]
-	name = Labi Kyo
-	email = labikyo@gmail.com
+  name = Labi Kyo
+  email = labikyo@gmail.com
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
+  editor = vim
+  excludesfile = ~/.gitignore
+  autocrlf = true
+  safecrlf = false
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-[merge]
-	tool = opendiff
-[branch]
-	autosetuprebase = always
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
