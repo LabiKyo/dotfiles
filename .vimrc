@@ -134,6 +134,8 @@ colorscheme desert
 "hi FoldColumn cterm=bold ctermfg=2
 
 set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,big5,euc-jp,euc-kr,latin1
+set termencoding=utf-8
 
 "set so=4
 set number
