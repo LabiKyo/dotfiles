@@ -31,3 +31,6 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/vim-ls"]
+	path = bundle/vim-ls
+	url = git://github.com/gkz/vim-ls.git
