@@ -137,7 +137,8 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
 
-"set so=4
+" scroll off
+set so=10
 set number
 set whichwrap=b,s,<,>,[,],h,l
 
