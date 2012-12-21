@@ -6,3 +6,5 @@ ln ./.vim/.vimrc ./
 ln ./.vim/.zshrc ./
 ln -s ./.vim/.zsh ./.zsh
 ln ./.vim/.tmux.conf ./
+ln ./.pentadactylrc ../.pentadactylrc
+ln -s ./.pentadactyl ../.pentadactyl
