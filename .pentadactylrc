@@ -9,7 +9,7 @@ set defsearch=duckduckgo-ssl
 
 " pass keys
 set passkeys+=*:<UP><DOWN><LEFT><RIGHT><Space><CR>
-set passkeys+=mail.google.com:jknpcxerRaAfFI?[]{}#/`~,*a,*n,*r,*u,*s,*t,gi,gs,gt,gd,ga,gl
+set passkeys+=mail.google.com:jknpcxerRvaAfFI?[]{}#/`~,*a,*n,*r,*u,*s,*t,gi,gs,gt,gd,ga,gl
 
 " remap
 noremap -count -description='previous <count> tab(s)' -modes=n,v h <count>gT
