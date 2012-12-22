@@ -1,5 +1,5 @@
 # alias
-alias linode='ssh -D 7070 labikyo@linodehost'
+alias linode='ssh -D 7070 labikyo@newnode'
 
 alias psgrep="ps aux | grep -v grep | grep"
 if [[ "`uname`" == 'Linux' ]]; then
@@ -19,4 +19,8 @@ alias p="python"
 alias g="git"
 alias r="irb"
 alias rb="ruby"
+alias n="node"
+alias c="coffee"
+alias l="livescript"
+alias m="mimosa"
 
