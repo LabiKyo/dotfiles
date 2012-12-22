@@ -27,8 +27,6 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
-  autocrlf = true
-  safecrlf = false
 [color]
   branch = auto
   diff = auto
