@@ -1,3 +1,6 @@
 .netrwhist
 undo/*
 .zsh/dirs.zsh
+.DS_Store
+.swp
+~
