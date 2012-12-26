@@ -19,3 +19,5 @@ if [[ "`uname`" == 'Linux' ]]; then
         tmux attach
     fi
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
