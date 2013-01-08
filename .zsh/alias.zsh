@@ -1,5 +1,5 @@
 # alias
-alias linode='ssh -D 7070 labikyo@newnode'
+alias linode='ssh -D 7070 -p 231 labikyo@newnode'
 
 alias psgrep="ps aux | grep -v grep | grep"
 if [[ "`uname`" == 'Linux' ]]; then
