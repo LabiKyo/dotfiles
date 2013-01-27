@@ -5,3 +5,4 @@ undo/*
 .swp
 ~
 node_modules
+*.psd
