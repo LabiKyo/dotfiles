@@ -8,3 +8,5 @@ ln -s ./.vim/.zsh ./.zsh
 ln ./.vim/.tmux.conf ./
 ln ./.pentadactylrc ../.pentadactylrc
 ln -s ./.pentadactyl ../.pentadactyl
+
+ln ./.vim/.redis.conf ./
