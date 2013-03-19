@@ -3,7 +3,7 @@
 loadplugins '\.(js|penta)$'
 group user
 highlight Hint font: bold 20px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 0 0 0 1px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .9); color: black; text-transform: uppercase;
-set guioptions=bCrsBT
+set guioptions=bCrsT
 set hintkeys=asdfg;lkjh
 
 " pass keys
