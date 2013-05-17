@@ -21,6 +21,7 @@
   amend = commit --amend -C HEAD
   cp = cherry-pick
   cl = clone
+  au = add -u .
 [user]
   name = Labi Kyo
   email = labikyo@gmail.com
