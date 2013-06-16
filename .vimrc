@@ -88,16 +88,14 @@ if &diff
 	set wrap=on
 endif
 
-" Octave syntax
-"augroup filetypedetect
-"  au! BufRead,BufNewFile *.m,*.oct set filetype=octave
-"augroup END
-
 " pathogen.vim
 call pathogen#infect()
 
 
 " user defined from here
+" save files folding
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
 " key binding
 
 nnoremap j gj
