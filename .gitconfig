@@ -22,6 +22,7 @@
   cp = cherry-pick
   cl = clone
   au = add -u .
+  sm = submodule
 [user]
   name = Labi Kyo
   email = labikyo@gmail.com

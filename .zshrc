@@ -21,3 +21,5 @@ if [[ "`uname`" == 'Linux' ]]; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+[[ -s /Users/labikyo/.nvm/nvm.sh ]] && . /Users/labikyo/.nvm/nvm.sh # This loads NVM

@@ -22,5 +22,7 @@ alias rb="ruby"
 alias n="node"
 alias c="coffee"
 alias l="livescript"
-alias m="mimosa"
+alias me="meteor"
+alias mi="mimosa"
+alias mo="mongo"
 

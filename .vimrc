@@ -88,6 +88,13 @@ if &diff
 	set wrap=on
 endif
 
+" load rsense
+let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec"
+let g:rsenseUseOmniFunc = 1
+
+" supertab config
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 " pathogen.vim
 call pathogen#infect()
 
@@ -122,7 +129,7 @@ inoremap jj <Esc>
 inoremap kk <Esc>
 
 " write with sudo
-cnoremap w!! w !sudo tee % >/dev/null
+cnoremap suw w !sudo tee % >/dev/null
 
 colorscheme desert
 " Highlight trailing whitespace
