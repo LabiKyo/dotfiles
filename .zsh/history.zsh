@@ -12,3 +12,6 @@ setopt hist_ignore_all_dups
 
 # set up the extended globing - that's so nice :)
 setopt extendedglob
+
+# append command to history file once executed
+setopt INC_APPEND_HISTORY

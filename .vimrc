@@ -97,12 +97,15 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " pathogen.vim
 call pathogen#infect()
+call pathogen#helptags()
 
 
 " user defined from here
+
 " save files folding
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+" au BufWinLeave ?* mkview
+" au BufWinEnter ?* silent loadview
+
 " key binding
 
 nnoremap j gj
@@ -192,6 +195,59 @@ au BufReadPost * set relativenumber
 " autocmd WinEnter * set cursorline
 " autocmd WinEnter * set cursorcolumn
 
+" rainbow parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" airline
+"set laststatus=2
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme='powerlineish'
+
+" powerline
+set laststatus=2
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set guifont=Inconsolata\ for\ Powerline:h18
+
+" syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_always_populate_loc_list=1
+
+" NERDTree Tabs
+let g:nerdtree_tabs_open_on_console_startup=1
+
+" tagbar
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
+
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }
+
 " reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
@@ -215,3 +271,6 @@ inoremap <C-k> <Esc><Right>C
 " powerful command line
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Delete>
