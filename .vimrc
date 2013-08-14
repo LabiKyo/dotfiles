@@ -248,6 +248,11 @@ let g:tagbar_type_ruby = {
     \ ]
 \ }
 
+" CtrlP
+let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
 " reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
