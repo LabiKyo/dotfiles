@@ -133,13 +133,13 @@ inoremap kk <Esc>
 " write with sudo
 cnoremap suw w !sudo tee % >/dev/null
 
-colorscheme desert
+" colorscheme
+colorscheme solarized
 set background=light
+
 " Highlight trailing whitespace
 :highlight TrailWhitespace ctermbg=red guibg=red
 :match TrailWhitespace /\s\+$\| \+\ze\t/
-"hi Folded cterm=bold ctermfg=1
-"hi FoldColumn cterm=bold ctermfg=2
 
 " encoding
 set encoding=utf-8
@@ -151,12 +151,16 @@ set so=10
 set number
 set whichwrap=b,s,<,>,[,],h,l
 
+" unfo
 set undofile
 set undodir=~/.vim/undo
 
+" no backup
 set nobackup
 set writebackup
 set noswapfile
+
+" helptags
 helptags ~/.vim/doc
 
 " set filetype
