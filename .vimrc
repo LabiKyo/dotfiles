@@ -104,6 +104,13 @@ call pathogen#helptags()
 
 
 " user defined from here
+"
+" cursor
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 " key binding
 
