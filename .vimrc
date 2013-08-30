@@ -68,6 +68,9 @@ if has("autocmd")
 
   augroup END
 
+  " enable indent guides
+  au VimEnter * IndentGuidesEnable
+
 else
 
   set autoindent		" always set autoindenting on
@@ -102,10 +105,6 @@ call pathogen#helptags()
 
 " user defined from here
 
-" save files folding
-" au BufWinLeave ?* mkview
-" au BufWinEnter ?* silent loadview
-
 " key binding
 
 nnoremap j gj
@@ -135,12 +134,14 @@ inoremap kk <Esc>
 cnoremap suw w !sudo tee % >/dev/null
 
 colorscheme desert
+set background=light
 " Highlight trailing whitespace
 :highlight TrailWhitespace ctermbg=red guibg=red
 :match TrailWhitespace /\s\+$\| \+\ze\t/
 "hi Folded cterm=bold ctermfg=1
 "hi FoldColumn cterm=bold ctermfg=2
 
+" encoding
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
@@ -187,24 +188,11 @@ set relativenumber
 " make relative number set for all buffer
 au BufReadPost * set relativenumber
 
-" cursor
-" set cursorline
-" set cursorcolumn
-" autocmd WinLeave * set nocursorline
-" autocmd WinLeave * set nocursorcolumn
-" autocmd WinEnter * set cursorline
-" autocmd WinEnter * set cursorcolumn
-
 " rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-
-" airline
-"set laststatus=2
-"let g:airline_powerline_fonts = 1
-"let g:airline_theme='powerlineish'
 
 " powerline
 set laststatus=2
