@@ -3,6 +3,9 @@ cd ~
 ln ./.vim/.gitignore ./
 ln ./.vim/.gitconfig ./
 ln ./.vim/.vimrc ./
+ln ./.vim/.vimrc.user ./
+ln ./.vim/.vimrc.keymap ./
+ln ./.vim/.vimrc.plugin ./
 ln ./.vim/.zshrc ./
 ln -s ./.vim/.zsh ./.zsh
 ln -s ./.vim/.oh-my-zsh ./.oh-my-zsh/

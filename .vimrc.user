@@ -1,0 +1,76 @@
+" user defined configs
+
+" basic configs
+set number
+set whichwrap=b,s,<,>,[,],h,l
+
+" relative number
+set relativenumber
+
+" make relative number set for all buffer
+au BufReadPost * set relativenumber
+
+" scroll off
+set scrolloff=10
+
+" encoding
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,big5,euc-jp,euc-kr,latin1
+set termencoding=utf-8
+
+" colorscheme
+colorscheme solarized
+set background=light
+
+" cursor
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
+" highlight trailing whitespace
+:highlight TrailWhitespace ctermbg=red guibg=red
+:match TrailWhitespace /\s\+$\| \+\ze\t/
+
+" unfo
+set undofile
+set undodir=~/.vim/undo
+
+" clipboard
+set clipboard=unnamed
+
+" no backup
+set nobackup
+set writebackup
+set noswapfile
+
+" helptags
+helptags ~/.vim/doc
+
+" diff settings
+if &diff
+  set scrollopt='vertical'
+  set wrap=on
+endif
+
+" set filetype
+let filetype_m='objc'
+let filetype_tpl='smarty'
+let filetype_less='less'
+
+" list setting
+set list
+set listchars=tab:▸-,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
+
+" indent setting
+set autoindent
+"set smartindent
+"set cindent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set noexpandtab
+set formatoptions+=mM
+set expandtab

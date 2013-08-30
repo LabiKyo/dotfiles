@@ -9,16 +9,10 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" if has("vms")
-"   set nobackup		" do not keep a backup file, use versions instead
-" else
-"   set backup		" keep a backup file
-" endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set history=50 " keep 50 lines of command line history
+set ruler      " show the cursor position all the time
+set showcmd    " display incomplete commands
+set incsearch  " do incremental searching
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -68,12 +62,9 @@ if has("autocmd")
 
   augroup END
 
-  " enable indent guides
-  au VimEnter * IndentGuidesEnable
-
 else
 
-  set autoindent		" always set autoindenting on
+  set autoindent " always set autoindenting on
 
 endif " has("autocmd")
 
@@ -82,200 +73,19 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+    \ | wincmd p | diffthis
 endif
-
-" diff settings
-if &diff
-	set scrollopt='vertical'
-	set wrap=on
-endif
-
-" load rsense
-let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec"
-let g:rsenseUseOmniFunc = 1
-
-" supertab config
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-
-" user defined from here
-"
-" cursor
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
-
-" key binding
-
-nnoremap j gj
-nnoremap k gk
-noremap H ^
-noremap L $
-
-" Scroll the viewpoint faster
-nnoremap <C-e> 10<C-e>
-nnoremap <C-y> 10<C-y>
-
-" use enter to create a new line
-nnoremap <CR> o
-
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" smart escape
-inoremap jk <Esc>
-inoremap kj <Esc>
-inoremap jj <Esc>
-inoremap kk <Esc>
-
-" write with sudo
-cnoremap suw w !sudo tee % >/dev/null
-
-" colorscheme
-colorscheme solarized
-set background=light
-
-" Highlight trailing whitespace
-:highlight TrailWhitespace ctermbg=red guibg=red
-:match TrailWhitespace /\s\+$\| \+\ze\t/
-
-" encoding
-set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,gb18030,big5,euc-jp,euc-kr,latin1
-set termencoding=utf-8
-
-" scroll off
-set so=10
-set number
-set whichwrap=b,s,<,>,[,],h,l
-
-" unfo
-set undofile
-set undodir=~/.vim/undo
-
-" no backup
-set nobackup
-set writebackup
-set noswapfile
-
-" helptags
-helptags ~/.vim/doc
-
-" set filetype
-let filetype_m='objc'
-let filetype_tpl='smarty'
-let filetype_less='less'
-
-" list setting
-set list
-set listchars=tab:▸-,trail:⋅,extends:❯,precedes:❮
-set showbreak=↪
-
-" indent setting
-set ai
-set si
-set cindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
-set formatoptions+=mM
-set expandtab
-
-" clipboard
-set clipboard=unnamed
-
-" relative number
-set relativenumber
-" make relative number set for all buffer
-au BufReadPost * set relativenumber
-
-" rainbow parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" powerline
-set laststatus=2
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set guifont=Inconsolata\ for\ Powerline:h18
-
-" syntastic
-let g:syntastic_check_on_open=1
-let g:syntastic_always_populate_loc_list=1
-
-" NERDTree Tabs
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" tagbar
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-        \ 'f:functions',
-        \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-        \ 'f' : 'object',
-        \ 'o' : 'object',
-        \ }
-        \ }
+if filereadable(expand("~/.vimrc.user"))
+  source ~/.vimrc.user
 endif
-
-let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
-
-" CtrlP
-let g:ctrlp_map = '<c-c>'
-let g:ctrlp_cmd = 'CtrlPBuffer'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-" reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
-
-" make Y behave like other capitals
-map Y y$
-
-" emacs style key binding for insert mode
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
-inoremap <M-b> <C-o>b
-inoremap <M-f> <C-o>w
-inoremap <C-w> <Esc><Right>cb
-inoremap <C-u> <Esc><Right>c0
-inoremap <C-k> <Esc><Right>C
-
-" powerful command line
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-b> <Left>
-cnoremap <C-f> <Right>
-cnoremap <C-d> <Delete>
+if filereadable(expand("~/.vimrc.keymap"))
+  source ~/.vimrc.keymap
+endif
+if filereadable(expand("~/.vimrc.plugin"))
+  source ~/.vimrc.plugin
+endif
