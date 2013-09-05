@@ -30,7 +30,7 @@ augroup CursorLine
 augroup END
 
 " highlight trailing whitespace
-:highlight TrailWhitespace ctermbg=red guibg=red
+:highlight TrailWhitespace ctermbg=green guibg=green
 :match TrailWhitespace /\s\+$\| \+\ze\t/
 
 " unfo

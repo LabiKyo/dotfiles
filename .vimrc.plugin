@@ -57,6 +57,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " supertab config
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
+" AutoComplPop ACP
+let g:acp_enableAtStartup = 0
+
 " rsense
 let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec"
 let g:rsenseUseOmniFunc = 1

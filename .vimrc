@@ -80,12 +80,12 @@ endif
 call pathogen#infect()
 call pathogen#helptags()
 
+if filereadable(expand("~/.vimrc.plugin"))
+  source ~/.vimrc.plugin
+endif
 if filereadable(expand("~/.vimrc.user"))
   source ~/.vimrc.user
 endif
 if filereadable(expand("~/.vimrc.keymap"))
   source ~/.vimrc.keymap
-endif
-if filereadable(expand("~/.vimrc.plugin"))
-  source ~/.vimrc.plugin
 endif
