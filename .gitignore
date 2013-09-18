@@ -7,3 +7,7 @@
 ~
 node_modules
 *.psd
+
+.rvmrc
+.ruby-version
+.ruby-gemset

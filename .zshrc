@@ -6,6 +6,8 @@ DIR="$HOME/.zsh"
 for FILE in `ls $DIR`; do
     source "$DIR/$FILE"
 done
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -13,10 +15,6 @@ done
 # time that oh-my-zsh is loaded.
 ZSH_THEME="sunrise"
 DEFAULT_USER="labikyo"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -47,6 +45,6 @@ DEFAULT_USER="labikyo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cake coffee npm pip redis-cli osx rvm)
+plugins=(brew bundler cake coffee npm osx pip redis-cli rvm)
 
 source $ZSH/oh-my-zsh.sh
