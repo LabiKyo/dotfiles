@@ -1,11 +1,7 @@
 # named directories
-#codes=~/Dropbox/Codes
-#python=~codes/Python
-#node=~codes/node
-#js=~codes/JavaScript
-#wdc=~codes/Ruby/Rails/wdc
-#express=~codes/express
-
-#dropbox=~/Dropbox
-#notes=~dropbox/Notes
-#books=~dropbox/Books
+dropbox=~/Dropbox
+codes=~dropbox/Codes
+python=~codes/Python
+js=~codes/js
+ruby=~codes/Ruby
+rails=~ruby/rails
