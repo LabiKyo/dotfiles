@@ -6,13 +6,6 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-" powerline
-set laststatus=2
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set guifont=Inconsolata\ for\ Powerline:h18
-
 " syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list=1
