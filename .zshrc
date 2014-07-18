@@ -7,7 +7,9 @@ for FILE in `ls $DIR`; do
     source "$DIR/$FILE"
 done
 
-eval "$(rbenv init -)"
+if type "rbenv" > /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 
 # Set name of the theme to load.
