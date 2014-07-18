@@ -7,6 +7,40 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" required Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#begin()
+
+" bundles
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'mileszs/ack.vim'
+" + style
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nathanaelkane/vim-indent-guides'
+" + syntax
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'slim-template/vim-slim'
+Bundle 'wavded/vim-stylus'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
+Bundle 'gkz/vim-ls'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
+Bundle 'nono/vim-handlebars'
+Bundle 'kchmck/vim-coffee-script'
+
+call vundle#end()
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set history=50 " keep 50 lines of command line history
@@ -76,10 +110,8 @@ if !exists(":DiffOrig")
     \ | wincmd p | diffthis
 endif
 
-" pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
 
+" expand other config files
 if filereadable(expand("~/.vimrc.plugin"))
   source ~/.vimrc.plugin
 endif
