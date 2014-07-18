@@ -59,3 +59,6 @@ let g:rsenseUseOmniFunc = 1
 
 " enable indent guides
 au VimEnter * IndentGuidesEnable
+
+" ack
+let g:ack_autofold_results = 1
