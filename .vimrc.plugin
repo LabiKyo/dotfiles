@@ -17,29 +17,20 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 Bundle 'scrooloose/nerdtree'
 
 Bundle 'jistr/vim-nerdtree-tabs'
-nnoremap m <plug>NERDTreeTabsToggle<CR>
+nmap <S-z> <plug>NERDTreeTabsToggle<CR>
 
 Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list=1
 
 Bundle 'majutsushi/tagbar'
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-        \ 'f:functions',
-        \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-        \ 'f' : 'object',
-        \ 'o' : 'object',
-        \ }
-        \ }
-endif
+" this plugin require ctags installed
+nmap <S-x> ;TagbarToggle<CR>
 
+" + CoffeeScript Tags
+  Bundle 'lukaszkorecki/CoffeeTags'
+
+" + Ruby Tabs
 let g:tagbar_type_ruby = {
     \ 'kinds' : [
         \ 'm:modules',
