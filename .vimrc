@@ -7,50 +7,16 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" required Vundle setup
-filetype off
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#begin()
-
-" bundles
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'mileszs/ack.vim'
-Bundle 'ervandew/supertab'
-Bundle 'pbrisbin/vim-mkdir'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/ruby-matchit'
-" + style
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nathanaelkane/vim-indent-guides'
-" + syntax
-Bundle 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'slim-template/vim-slim'
-Bundle 'wavded/vim-stylus'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'groenewege/vim-less'
-Bundle 'gkz/vim-ls'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'nono/vim-handlebars'
-Bundle 'kchmck/vim-coffee-script'
-
-call vundle#end()
+if filereadable(expand("~/.vimrc.plugin"))
+  source ~/.vimrc.plugin
+endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-set history=50 " keep 50 lines of command line history
-set ruler      " show the cursor position all the time
-set showcmd    " display incomplete commands
-set incsearch  " do incremental searching
+set history=256 " keep 256 lines of command line history
+set ruler       " show the cursor position all the time
+set showcmd     " display incomplete commands
+set incsearch   " do incremental searching
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -69,7 +35,10 @@ endif
 if &t_Co > 2 || has("gui_running")
   syntax enable
   syntax on
+  set synmaxcol=248
   set hlsearch
+  set ignorecase          " Do case in sensitive matching with
+  set smartcase           " be sensitive when there's a capital letter
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -116,9 +85,6 @@ endif
 
 
 " expand other config files
-if filereadable(expand("~/.vimrc.plugin"))
-  source ~/.vimrc.plugin
-endif
 if filereadable(expand("~/.vimrc.user"))
   source ~/.vimrc.user
 endif

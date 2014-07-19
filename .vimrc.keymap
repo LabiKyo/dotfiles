@@ -7,8 +7,8 @@ map Y y$
 " easier move around
 "nnoremap j gj
 "nnoremap k gk
-noremap H ^
-noremap L $
+nnoremap H ^
+nnoremap L $
 
 " navigate between windows
 nnoremap <C-h> <C-w>h
@@ -20,8 +20,9 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-e> 10<C-e>
 nnoremap <C-y> 10<C-y>
 
-" use enter to create a new line
-nnoremap <CR> o
+" switch ;: for easier command mode
+nnoremap ; :
+nnoremap : ;
 
 " ========== insert mode
 " smart escape
@@ -45,6 +46,9 @@ inoremap <C-k> <Esc><Right>C
 " reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
+
+" save the clipboard for visual patse
+vnoremap p pgvy
 
 " ========== commandline mode
 " write with sudo

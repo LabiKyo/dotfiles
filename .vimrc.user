@@ -22,6 +22,9 @@ set termencoding=utf-8
 colorscheme solarized
 set background=light
 
+" redraw
+set lazyredraw
+
 " cursor
 augroup CursorLine
   au!
@@ -33,17 +36,23 @@ augroup END
 :highlight TrailWhitespace ctermbg=green guibg=green
 :match TrailWhitespace /\s\+$\| \+\ze\t/
 
-" unfo
+" undo
 set undofile
 set undodir=~/.vim/undo
 
 " clipboard
 set clipboard=unnamed
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 " no backup
 set nobackup
 set writebackup
 set noswapfile
+
+" auto source after config changed
+autocmd! bufwritepost .vimrc* source ~/.vimrc
 
 " helptags
 helptags ~/.vim/doc
@@ -66,11 +75,10 @@ set showbreak=↪
 
 " indent setting
 set autoindent
-"set smartindent
-"set cindent
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set noexpandtab
-set formatoptions+=mM
+set smarttab
 set expandtab
+set formatoptions=mMcq
