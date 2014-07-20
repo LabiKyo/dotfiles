@@ -21,8 +21,8 @@ nnoremap <C-e> 10<C-e>
 nnoremap <C-y> 10<C-y>
 
 " switch ;: for easier command mode
-nnoremap ; :
-nnoremap : ;
+noremap ; :
+noremap : ;
 
 " ========== insert mode
 " smart escape

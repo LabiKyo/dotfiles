@@ -85,6 +85,9 @@ nmap <Leader>gl ;Glog<CR>
 nmap <Leader>gp ;Git push<CR>
 nmap <Leader>gw ;Gwrite<CR>
 
+Plugin 'godlygeek/tabular'
+ca tab Tabular
+
 " + style
 Plugin 'kien/rainbow_parentheses.vim'
 au VimEnter * RainbowParenthesesToggle
