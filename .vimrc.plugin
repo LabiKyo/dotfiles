@@ -30,6 +30,9 @@ map <Leader>u ;UndotreeToggle<CR>
 let g:undotree_WindowLayout = 2
 let g:undotree_SplitWidth = 35
 
+Plugin 'vim-scripts/bufexplorer.zip'
+noremap <silent> <CR> :BufExplorer<CR>
+
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Lokaltog/vim-easymotion'
