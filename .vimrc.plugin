@@ -20,6 +20,8 @@ map <Leader>u ;UndotreeToggle<CR>
 let g:undotree_WindowLayout = 2
 let g:undotree_SplitWidth = 35
 
+Plugin 'terryma/vim-multiple-cursors'
+
 Plugin 'Lokaltog/vim-easymotion'
 map <Leader>s <Plug>(easymotion-s2)
 map <Leader>t <Plug>(easymotion-t2)
@@ -89,6 +91,7 @@ Plugin 'bling/vim-airline'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
 
 " + syntax
 Plugin 'plasticboy/vim-markdown'
