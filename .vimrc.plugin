@@ -11,9 +11,11 @@ ca install PluginInstall
 
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-c>'
-let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = 'find %s -type f'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
