@@ -7,6 +7,9 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" set mapleader
+let mapleader = "\<Space>"
+
 if filereadable(expand("~/.vimrc.plugin"))
   source ~/.vimrc.plugin
 endif
