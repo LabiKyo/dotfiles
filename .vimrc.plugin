@@ -33,6 +33,10 @@ let g:undotree_SplitWidth = 35
 Plugin 'vim-scripts/bufexplorer.zip'
 noremap <silent> <CR> :BufExplorer<CR>
 
+Plugin 'tpope/vim-commentary'
+nmap <BS> gcc
+vmap <BS> gc
+
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Lokaltog/vim-easymotion'
@@ -76,6 +80,7 @@ let g:tagbar_type_ruby = {
 Plugin 'epmatsw/ag.vim'
 let g:ag_autofold_results = 1
 ca ag Ag
+
 Plugin 'taiansu/nerdtree-ag'
 
 Plugin 'ervandew/supertab'
