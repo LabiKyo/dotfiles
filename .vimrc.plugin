@@ -76,6 +76,15 @@ Plugin 'vim-scripts/ruby-matchit'
 
 Plugin 'Raimondi/delimitMate'
 
+Plugin 'tpope/vim-fugitive'
+nmap <Leader>gs ;Gstatus<CR>
+nmap <Leader>gd ;Gdiff<CR>
+nmap <Leader>gc ;Gcommit<CR>
+nmap <Leader>gb ;Gblame<CR>
+nmap <Leader>gl ;Glog<CR>
+nmap <Leader>gp ;Git push<CR>
+nmap <Leader>gw ;Gwrite<CR>
+
 " + style
 Plugin 'kien/rainbow_parentheses.vim'
 au VimEnter * RainbowParenthesesToggle
