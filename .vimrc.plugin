@@ -6,15 +6,15 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " bundles
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-c>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 map <Space>s <Plug>(easymotion-s2)
 map <Space>t <Plug>(easymotion-t2)
 map <Space>h <Plug>(easymotion-linebackward)
@@ -24,21 +24,21 @@ map <Space>l <Plug>(easymotion-lineforward)
 let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 let g:EasyMotion_smartcase = 1
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
 nmap <S-z> <plug>NERDTreeTabsToggle<CR>
 
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list=1
 
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " this plugin require ctags installed
 nmap <S-x> ;TagbarToggle<CR>
 
 " + CoffeeScript Tags
-  Bundle 'lukaszkorecki/CoffeeTags'
+  Plugin 'lukaszkorecki/CoffeeTags'
 
 " + Ruby Tabs
 let g:tagbar_type_ruby = {
@@ -52,55 +52,62 @@ let g:tagbar_type_ruby = {
     \ ]
 \ }
 
-Bundle 'mileszs/ack.vim'
-let g:ack_autofold_results = 1
+Plugin 'epmatsw/ag.vim'
+let g:ag_autofold_results = 1
+Plugin 'taiansu/nerdtree-ag'
 
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
-Bundle 'pbrisbin/vim-mkdir'
+Plugin 'pbrisbin/vim-mkdir'
 
-Bundle 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/matchit.zip'
 
-Bundle 'vim-scripts/ruby-matchit'
+Plugin 'vim-scripts/ruby-matchit'
 
 " + style
-Bundle 'kien/rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 au VimEnter * IndentGuidesEnable
 
+Plugin 'bling/vim-airline'
+" require patched powerline font installed
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
 " + syntax
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
-Bundle 'slim-template/vim-slim'
+Plugin 'slim-template/vim-slim'
 
-Bundle 'wavded/vim-stylus'
+Plugin 'wavded/vim-stylus'
 
-Bundle 'digitaltoad/vim-jade'
+Plugin 'digitaltoad/vim-jade'
 
-Bundle 'groenewege/vim-less'
+Plugin 'groenewege/vim-less'
 
-Bundle 'gkz/vim-ls'
+Plugin 'gkz/vim-ls'
 
-Bundle 'hail2u/vim-css3-syntax'
+Plugin 'hail2u/vim-css3-syntax'
 
-Bundle 'tpope/vim-cucumber'
+Plugin 'tpope/vim-cucumber'
 
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-haml'
 
-Bundle 'nono/vim-handlebars'
+Plugin 'nono/vim-handlebars'
 
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
