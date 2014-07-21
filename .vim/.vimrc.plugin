@@ -9,31 +9,13 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 ca install PluginInstall
 
-Plugin 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-c>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = 'find %s -type f'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
 Plugin 'mbbill/undotree'
 map <Leader>u ;UndotreeToggle<CR>
 let g:undotree_WindowLayout = 2
 let g:undotree_SplitWidth = 35
 
 Plugin 'vim-scripts/bufexplorer.zip'
-noremap <silent> <CR> :BufExplorer<CR>
+noremap <silent> <C-C> :BufExplorer<CR>
 
 Plugin 'tpope/vim-commentary'
 nmap <BS> gcc
@@ -207,6 +189,9 @@ Plugin 'bling/vim-airline'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+Plugin 'tpope/vim-vinegar'
+nmap <CR> <Plug>VinegarUp
 
 " + syntax
 Plugin 'plasticboy/vim-markdown'
