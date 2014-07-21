@@ -1,17 +1,18 @@
 #!/bin/sh
+dir=`pwd`
+
 git submodule init
 git submodule update
 
-cd ~
-ln -sf ./.dotfiles/.gitignore ./
-ln -sf ./.dotfiles/.gitconfig ./
-ln -sf ./.dotfiles/.vimrc ./
-ln -sf ./.dotfiles/.zshrc ./
-ln -sf ./.dotfiles/.tmux.conf ./
-ln -sf ./.dotfiles/.redis.conf ./
-ln -sf ./.dotfiles/.gemrc ./
-ln -sf ./.dotfiles/.wgetrc ./
+ln -sf $dir/.gitignore ~/
+ln -sf $dir/.gitconfig ~/
+ln -sf $dir/.vimrc ~/
+ln -sf $dir/.zshrc ~/
+ln -sf $dir/.tmux.conf ~/
+ln -sf $dir/.redis.conf ~/
+ln -sf $dir/.gemrc ~/
+ln -sf $dir/.wgetrc ~/
 
-ln -sfh ./.dotfiles/.zsh ./.zsh
-ln -sfh ./.dotfiles/.vim ./.vim
-ln -sfh ./.dotfiles/.oh-my-zsh ./.oh-my-zsh
+ln -sfh $dir/.zsh ~/.zsh
+ln -sfh $dir/.vim ~/.vim
+ln -sfh $dir/.oh-my-zsh ~/.oh-my-zsh

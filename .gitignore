@@ -1,5 +1,6 @@
 /.vim/undo/*
 /.vim/view/*
+/.vim/doc/tags
 /.zsh/dirs.zsh
 .DS_Store
 .swp

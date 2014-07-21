@@ -11,7 +11,7 @@ set nocompatible
 let mapleader = "\<Space>"
 
 if filereadable(expand("~/.vim/.vimrc.plugin"))
-  source ~/.vimrc.plugin
+  source ~/.vim/.vimrc.plugin
 endif
 
 " allow backspacing over everything in insert mode
@@ -89,8 +89,8 @@ endif
 
 " expand other config files
 if filereadable(expand("~/.vim/.vimrc.user"))
-  source ~/.vimrc.user
+  source ~/.vim/.vimrc.user
 endif
 if filereadable(expand("~/.vim/.vimrc.keymap"))
-  source ~/.vimrc.keymap
+  source ~/.vim/.vimrc.keymap
 endif
