@@ -10,7 +10,7 @@ set nocompatible
 " set mapleader
 let mapleader = "\<Space>"
 
-if filereadable(expand("~/.vimrc.plugin"))
+if filereadable(expand("~/.vim/.vimrc.plugin"))
   source ~/.vimrc.plugin
 endif
 
@@ -88,9 +88,9 @@ endif
 
 
 " expand other config files
-if filereadable(expand("~/.vimrc.user"))
+if filereadable(expand("~/.vim/.vimrc.user"))
   source ~/.vimrc.user
 endif
-if filereadable(expand("~/.vimrc.keymap"))
+if filereadable(expand("~/.vim/.vimrc.keymap"))
   source ~/.vimrc.keymap
 endif

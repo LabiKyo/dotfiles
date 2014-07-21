@@ -1,15 +1,17 @@
 #!/bin/sh
-cd ~
-ln -sf ./.vim/.gitignore ./
-ln -sf ./.vim/.gitconfig ./
-ln -sf ./.vim/.vimrc ./
-ln -sf ./.vim/.vimrc.user ./
-ln -sf ./.vim/.vimrc.keymap ./
-ln -sf ./.vim/.vimrc.plugin ./
-ln -sf ./.vim/.zshrc ./
-ln -sf ./.vim/.tmux.conf ./
-ln -sf ./.vim/.redis.conf ./
-ln -sf ./.vim/.gemrc ./
+git submodule init
+git submodule update
 
-ln -sfh ./.vim/.zsh ./.zsh
-ln -sfh ./.vim/.oh-my-zsh ./.oh-my-zsh
+cd ~
+ln -sf ./.dotfiles/.gitignore ./
+ln -sf ./.dotfiles/.gitconfig ./
+ln -sf ./.dotfiles/.vimrc ./
+ln -sf ./.dotfiles/.zshrc ./
+ln -sf ./.dotfiles/.tmux.conf ./
+ln -sf ./.dotfiles/.redis.conf ./
+ln -sf ./.dotfiles/.gemrc ./
+ln -sf ./.dotfiles/.wgetrc ./
+
+ln -sfh ./.dotfiles/.zsh ./.zsh
+ln -sfh ./.dotfiles/.vim ./.vim
+ln -sfh ./.dotfiles/.oh-my-zsh ./.oh-my-zsh

@@ -1,7 +1,6 @@
-.netrwhist
-/undo/*
-/view/*
-.zsh/dirs.zsh
+/.vim/undo/*
+/.vim/view/*
+/.zsh/dirs.zsh
 .DS_Store
 .swp
 ~
