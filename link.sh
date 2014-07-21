@@ -13,6 +13,12 @@ ln -sf $dir/.redis.conf ~/
 ln -sf $dir/.gemrc ~/
 ln -sf $dir/.wgetrc ~/
 
-ln -sfh $dir/.zsh ~/.zsh
-ln -sfh $dir/.vim ~/.vim
-ln -sfh $dir/.oh-my-zsh ~/.oh-my-zsh
+if [ "$(uname)" == "Darwin" ]; then
+  ln -sfh $dir/.zsh ~/.zsh
+  ln -sfh $dir/.vim ~/.vim
+  ln -sfh $dir/.oh-my-zsh ~/.oh-my-zsh
+else
+  ln -sfT $dir/.zsh ~/.zsh
+  ln -sfT $dir/.vim ~/.vim
+  ln -sfT $dir/.oh-my-zsh ~/.oh-my-zsh
+fi
