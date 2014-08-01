@@ -1,6 +1,7 @@
 /.vim/undo/*
 /.vim/view/*
 /.vim/doc/tags
+/.vim/.netrwhist
 /.zsh/dirs.zsh
 .DS_Store
 .swp

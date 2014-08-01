@@ -34,6 +34,7 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 let g:EasyMotion_smartcase = 1
 
 Plugin 'scrooloose/nerdtree'
+let NERDTreeHijackNetrw=0
 
 Plugin 'Shougo/neocomplete.vim'
 " Use neocomplete.
@@ -124,6 +125,10 @@ nmap <Leader>z <plug>NERDTreeTabsToggle<CR>
 Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_enable_signs = 1
+
+let g:syntastic_objc_compiler = 'clang'
+let g:syntastic_objc_check_header = 0
 
 Plugin 'majutsushi/tagbar'
 " this plugin require ctags installed
