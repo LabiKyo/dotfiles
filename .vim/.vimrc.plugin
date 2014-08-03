@@ -172,7 +172,7 @@ nmap <Leader>gl ;Glog<CR>
 nmap <Leader>gp ;Git push<CR>
 nmap <Leader>gw ;Gwrite<CR>
 
-Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-signify'
 
 Plugin 'godlygeek/tabular'
 ca tab Tabular
