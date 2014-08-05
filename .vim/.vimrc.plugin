@@ -226,4 +226,6 @@ Plugin 'nono/vim-handlebars'
 
 Plugin 'kchmck/vim-coffee-script'
 
+Plugin 'othree/html5.vim'
+
 call vundle#end()
