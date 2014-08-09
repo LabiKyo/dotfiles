@@ -203,7 +203,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 Plugin 'tpope/vim-vinegar'
-nmap <CR> <Plug>VinegarUp
 
 " + syntax
 Plugin 'plasticboy/vim-markdown'
