@@ -14,8 +14,14 @@ map <Leader>u ;UndotreeToggle<CR>
 let g:undotree_WindowLayout = 2
 let g:undotree_SplitWidth = 35
 
-Plugin 'vim-scripts/bufexplorer.zip'
-noremap <silent> <C-C> :BufExplorer<CR>
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-c>'
+let g:ctrlp_cmd = 'CtrlPBuffer'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
 Plugin 'tpope/vim-commentary'
 nmap <BS> gcc
