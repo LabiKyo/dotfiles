@@ -105,7 +105,7 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+Plugin 'LabiKyo/neosnippet-snippets'
 
 " Plugin key-mappings.
 imap <C-j>     <Plug>(neosnippet_expand_or_jump)
