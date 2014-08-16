@@ -45,6 +45,7 @@ inoremap <C-e> <End>
 inoremap <C-w> <Esc><Right>cb
 inoremap <C-u> <Esc><Right>c0
 inoremap <C-k> <Esc><Right>C
+inoremap <C-d> <Del>
 
 " ========== visual mode
 " reselect visual block after indent/outdent
