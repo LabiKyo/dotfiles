@@ -27,7 +27,7 @@ Plugin 'tpope/vim-commentary'
 nmap <BS> gcc
 vmap <BS> gc
 
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'kristijanhusak/vim-multiple-cursors'
 
 Plugin 'Lokaltog/vim-easymotion'
 map <Leader>s <Plug>(easymotion-s2)
@@ -234,7 +234,7 @@ Plugin 'tpope/vim-cucumber'
 
 Plugin 'tpope/vim-haml'
 
-Plugin 'nono/vim-handlebars'
+Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'kchmck/vim-coffee-script'
 
