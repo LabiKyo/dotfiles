@@ -65,3 +65,11 @@ cnoremap <C-e> <End>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <C-d> <Delete>
+
+" write quite edit shortcuts
+cnoremap q1 q!
+cnoremap w1 w!
+cnoremap e1 e!
+cnoremap qa1 qa!
+cnoremap wa1 wa!
+cnoremap ea1 ea!
