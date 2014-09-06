@@ -7,8 +7,8 @@ map Y y$
 " easier move around
 "nnoremap j gj
 "nnoremap k gk
-nnoremap H ^
-nnoremap L $
+noremap H ^
+noremap L $
 
 " navigate between windows
 nnoremap <C-h> <C-w>h
