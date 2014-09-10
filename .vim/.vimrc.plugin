@@ -174,6 +174,10 @@ Plugin 'vim-scripts/ruby-matchit'
 
 Plugin 'jiangmiao/auto-pairs'
 let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutFastWrap = ''
+let g:AutoPairsShortcutBackInsert = ''
+nmap <Leader>p ;call AutoPairsToggle()<CR>
 
 Plugin 'tpope/vim-fugitive'
 nmap <Leader>gs ;Gstatus<CR>
