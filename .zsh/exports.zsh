@@ -1,6 +1,6 @@
 # exports
 export EDITOR=vim
-export PATH=~/.rbenv/shims:$PATH
+export PATH=~/.rbenv/shims:/usr/local/share/npm/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export ARCHFLAGS='-arch x86_64'
 export NODE_ENV='development'
 export NODE_PATH='/usr/local/share/npm/lib/node_modules'
