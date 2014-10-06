@@ -52,6 +52,10 @@ inoremap <C-d> <Del>
 vnoremap < <gv
 vnoremap > >gv
 
+" switch ;: for easier command mode
+vnoremap ; :
+vnoremap : ;
+
 " save the clipboard for visual patse
 vnoremap p pgvy
 
