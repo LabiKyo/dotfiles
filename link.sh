@@ -12,6 +12,7 @@ ln -sf $dir/.tmux.conf ~/
 ln -sf $dir/.redis.conf ~/
 ln -sf $dir/.gemrc ~/
 ln -sf $dir/.wgetrc ~/
+ln -sf $dir/.jshintrc ~/
 
 if [ "$(uname)" == "Darwin" ]; then
   ln -sfh $dir/.zsh ~/.zsh
