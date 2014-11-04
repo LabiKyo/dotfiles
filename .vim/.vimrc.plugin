@@ -247,6 +247,8 @@ Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'othree/html5.vim'
 
+Plugin 'mattn/emmet-vim'
+
 Plugin 'pangloss/vim-javascript'
 let javascript_enable_domhtmlcss = 1
 Plugin 'othree/javascript-libraries-syntax.vim'
