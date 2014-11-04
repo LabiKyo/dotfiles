@@ -249,6 +249,8 @@ Plugin 'othree/html5.vim'
 
 Plugin 'pangloss/vim-javascript'
 let javascript_enable_domhtmlcss = 1
+Plugin 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'angularjs'
 
 Plugin 'burnettk/vim-angular'
 
