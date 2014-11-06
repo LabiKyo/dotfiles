@@ -231,6 +231,8 @@ Plugin 'wavded/vim-stylus'
 
 Plugin 'digitaltoad/vim-jade'
 
+Plugin 'jimmyhchan/dustjs.vim'
+
 Plugin 'groenewege/vim-less'
 
 Plugin 'gkz/vim-ls'
@@ -248,6 +250,9 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5.vim'
 
 Plugin 'mattn/emmet-vim'
+let g:user_emmet_install_global = 0
+let g:user_emmet_mode='a'
+autocmd FileType html EmmetInstall
 
 Plugin 'pangloss/vim-javascript'
 let javascript_enable_domhtmlcss = 1
