@@ -194,9 +194,6 @@ Plugin 'mhinz/vim-signify'
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_line_highlight = 0
 
-Plugin 'godlygeek/tabular'
-ca tab Tabular
-
 " + style
 Plugin 'kien/rainbow_parentheses.vim'
 au VimEnter * RainbowParenthesesToggle
