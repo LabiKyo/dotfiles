@@ -10,6 +10,9 @@ done
 if type "rbenv" > /dev/null; then
   eval "$(rbenv init -)"
 fi
+if type 'brew' > /dev/null; then
+  source $(brew --prefix nvm)/nvm.sh
+fi
 
 
 # Set name of the theme to load.
