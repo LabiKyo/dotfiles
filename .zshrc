@@ -4,11 +4,16 @@ ZSH=$HOME/.oh-my-zsh
 # load configs
 DIR="$HOME/.zsh"
 for FILE in `ls $DIR`; do
+  if [[ $FILE =~ \.zsh$ ]]; then
     source "$DIR/$FILE"
+  fi
 done
 
 if type "rbenv" > /dev/null; then
   eval "$(rbenv init -)"
+fi
+if type "rvm" > /dev/null; then
+  source ~/.rvm/scripts/rvm
 fi
 if type 'brew' > /dev/null; then
   source $(brew --prefix nvm)/nvm.sh
@@ -54,3 +59,5 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(brew bundler rbenv cake coffee npm osx pip redis-cli)
 
 source $ZSH/oh-my-zsh.sh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
