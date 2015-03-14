@@ -19,7 +19,7 @@ let g:ctrlp_map = '<c-c>'
 let g:ctrlp_cmd = 'CtrlP'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git\|hg\|svn\|build\|dist'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git\|hg\|svn\|build\|dist\|public'
 
 " let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
@@ -253,11 +253,11 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_mode='a'
 autocmd FileType html EmmetInstall
 
-" Plugin 'pangloss/vim-javascript'
-" let javascript_enable_domhtmlcss = 1
-
-Plugin 'othree/yajs.vim'
+Plugin 'pangloss/vim-javascript'
 let javascript_enable_domhtmlcss = 1
+
+" Plugin 'othree/yajs.vim'
+" let javascript_enable_domhtmlcss = 1
 
 Plugin 'othree/javascript-libraries-syntax.vim'
 let g:used_javascript_libs = 'angularjs,react,flux,chai,backbone,underscore'
