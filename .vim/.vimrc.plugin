@@ -140,6 +140,8 @@ let g:syntastic_html_checkers = ['jslint']
 let g:syntastic_objc_compiler = 'clang'
 let g:syntastic_objc_check_header = 0
 
+let g:syntastic_json_checkers = ['jsonlint']
+
 nmap <Leader>e ;Errors<CR>
 nmap <Leader>c ;SyntasticCheck<CR>
 

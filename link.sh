@@ -13,6 +13,7 @@ ln -sf $dir/.redis.conf ~/
 ln -sf $dir/.gemrc ~/
 ln -sf $dir/.wgetrc ~/
 ln -sf $dir/.jshintrc ~/
+ln -sf $dir/.eslintrc ~/
 
 if [ "$(uname)" == "Darwin" ]; then
   ln -sfh $dir/.zsh ~/.zsh
