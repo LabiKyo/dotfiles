@@ -24,6 +24,14 @@ let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git\|hg\|
 
 " let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
+Plugin 'gcmt/taboo.vim'
+let g:taboo_tab_format = '[%N:%f%m] '
+let g:taboo_renamed_tab_format = '[%N:%l%m] '
+nmap <Leader>th ;tabfirst<CR>
+nmap <Leader>tl ;tablast<CR>
+map <Leader>tr ;TabooRename 
+map <Leader>to ;TabooOpen 
+
 Plugin 'tpope/vim-commentary'
 nmap <BS> gcc
 vmap <BS> gc
@@ -32,7 +40,6 @@ Plugin 'kristijanhusak/vim-multiple-cursors'
 
 Plugin 'Lokaltog/vim-easymotion'
 map <Leader>s <Plug>(easymotion-s2)
-map <Leader>t <Plug>(easymotion-t2)
 map <Leader>h <Plug>(easymotion-linebackward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
