@@ -18,6 +18,7 @@ Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-c>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'a'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git\|hg\|svn\|build\|dist\|public'
