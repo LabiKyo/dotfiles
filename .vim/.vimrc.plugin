@@ -6,8 +6,7 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " bundles
-Plugin 'gmarik/vundle'
-ca install PluginInstall
+Plugin 'VundleVim/vundle'
 
 Plugin 'mbbill/undotree'
 map <Leader>u ;UndotreeToggle<CR>
@@ -37,7 +36,20 @@ Plugin 'tpope/vim-commentary'
 nmap <BS> gcc
 vmap <BS> gc
 
-Plugin 'kristijanhusak/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
 
 Plugin 'Lokaltog/vim-easymotion'
 map <Leader>s <Plug>(easymotion-s2)

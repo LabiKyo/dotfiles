@@ -7,5 +7,6 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
-export PATH=~/.rbenv/shims:/usr/local/share/npm/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=~/.rbenv/shims:/usr/local/share/npm/bin:/usr/local/sbin:/usr/local/bin:~/.rvm/bin:$PATH
