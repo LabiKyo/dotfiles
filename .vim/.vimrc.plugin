@@ -275,7 +275,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 let g:user_emmet_install_global = 0
 let g:user_emmet_mode='a'
-autocmd FileType html EmmetInstall
+autocmd FileType html,javascript.jsx EmmetInstall
 
 Plugin 'pangloss/vim-javascript'
 let javascript_enable_domhtmlcss = 1
@@ -291,5 +291,8 @@ Plugin 'burnettk/vim-angular'
 Plugin 'tpope/vim-surround'
 
 Plugin 'tpope/vim-repeat'
+
+Plugin 'alvan/vim-closetag'
+let g:closetag_filenames = "*.html,*.jsx"
 
 call vundle#end()
