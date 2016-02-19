@@ -6,6 +6,7 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " bundles
+
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mbbill/undotree'
@@ -74,14 +75,14 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
+  let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -135,11 +136,11 @@ xmap <C-j>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
 
 " For snippet_complete marker.
 if has('conceal')
@@ -171,19 +172,19 @@ Plugin 'majutsushi/tagbar'
 nmap <Leader>x ;TagbarToggle<CR>
 
 " + CoffeeScript Tags
-  Plugin 'lukaszkorecki/CoffeeTags'
+Plugin 'lukaszkorecki/CoffeeTags'
 
 " + Ruby Tabs
 let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
+      \ 'kinds' : [
+      \ 'm:modules',
+      \ 'c:classes',
+      \ 'd:describes',
+      \ 'C:contexts',
+      \ 'f:methods',
+      \ 'F:singleton methods'
+      \ ]
+      \ }
 
 Plugin 'epmatsw/ag.vim'
 let g:ag_autofold_results = 1
@@ -288,5 +289,7 @@ let g:used_javascript_libs = 'angularjs,react,flux,chai,backbone,underscore'
 Plugin 'burnettk/vim-angular'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'tpope/vim-repeat'
 
 call vundle#end()
