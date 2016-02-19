@@ -6,7 +6,7 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " bundles
-Plugin 'VundleVim/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mbbill/undotree'
 map <Leader>u ;UndotreeToggle<CR>
@@ -286,5 +286,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 let g:used_javascript_libs = 'angularjs,react,flux,chai,backbone,underscore'
 
 Plugin 'burnettk/vim-angular'
+
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
