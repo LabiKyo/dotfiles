@@ -159,6 +159,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 let g:syntastic_html_checkers = ['jslint']
 
+let g:syntastic_scss_checkers = ['sassc']
+
 let g:syntastic_objc_compiler = 'clang'
 let g:syntastic_objc_check_header = 0
 
