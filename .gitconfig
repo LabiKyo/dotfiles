@@ -38,3 +38,6 @@
   whitespace = nowarn
 [push]
   default = simple
+
+[diff]
+  algorithm = patience
