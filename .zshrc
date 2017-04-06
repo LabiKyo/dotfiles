@@ -1,61 +1,73 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# load configs
-DIR="$HOME/.zsh"
-for FILE in `ls $DIR`; do
-  if [[ $FILE =~ \.zsh$ ]]; then
-    source "$DIR/$FILE"
-  fi
-done
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/labikyo/.oh-my-zsh
 
-if type "rbenv" > /dev/null; then
-  eval "$(rbenv init -)"
-fi
-if type "rvm" > /dev/null; then
-  source ~/.rvm/scripts/rvm
-fi
-if type 'brew' > /dev/null; then
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
-fi
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="geoffgarside"
-DEFAULT_USER="labikyo"
 
-# Set to this to use case-sensitive completion
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
 
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to change how often to auto-update (in days).
+export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler npm pip redis-cli git-flow docker web-search)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(brew git-flow docker docker-compose fasd mosh nvm yarn)
 
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"

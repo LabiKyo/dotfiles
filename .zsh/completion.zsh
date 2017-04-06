@@ -1,6 +1,9 @@
 if [ -d /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
+if [ -d $HOME/.zsh/completions ]; then
+  fpath=($HOME/.zsh/completions $fpath)
+fi
 autoload -U compinit
 compinit
 zstyle ':completion::complete:*' use-cache 1
